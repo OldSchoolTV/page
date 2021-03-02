@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background-image {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/Tesla-shop/image/space.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+#tesla-font {
+    margin: 3% auto;
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.main {
+    width: 80%;
+    height: 60%;
+    margin: 11% 10%;      
+    display: grid;  
+    grid-template-columns: 60% 40%;
+    border: solid 0 black;
+    border-radius: 15%;
+    box-shadow: 0px 0px 100px rgb(0, 0, 0);
+    position: absolute;
+    z-index: 1;
+}
+
+#modelle {
+    width: 55%;
+    height: 100%;
+    margin: 0 2%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 0 2%;
+    font-size: 21px;
+    color: rgb(190, 185, 185);
+    text-align: center;
+    list-style-type: none;
+    word-break: break-word;
+    position: absolute;
+}
+
+#modelle:hover {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+#left {
+    float: left;
+
+}
+
+#right {
+    float: right;
+}
+
+#geschichte {
+    font-size: 21px;
+    position: absolute;
+    margin: 21% 0;
+    bottom: 0;
+}
+
+.navigation {
+    background-image: url(/Tesla-shop/image/stars.gif);
+    color: rgb(190, 185, 185);
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%;
+}
+
+.images {
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+
+.exterior {
+    width: 100%;
+    float: right;
+    border-top-right-radius: 50px;
+}
+
+.interior {
+    width: 100%;
+    float: right;
+    border-bottom-right-radius: 50px;
+}
+
+.navigation li {
+    background-color: rgba(0, 0, 0, 0.678);
+    border-radius: 10px;
+    box-shadow: 8px -12px 30px;
+    line-height: 50px;
+    margin: 43px 20px;
+}
+
+.navigation li:hover {
+    background-color: #e82127;
+}
+
+.bottom-bar {
+    width: 100%;
+    padding: 1% 1%;
+    position: absolute;
+    bottom: 0;
+}
+
+#arrow-left {
+    background-color: black;
+    border-radius: 100%;
+    width: 45px;
+    display: flex;
+    float: left;
+    position: relative;
+}
