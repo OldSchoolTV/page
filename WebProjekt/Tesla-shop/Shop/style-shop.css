@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background-image {
+    width: 100%;
+    height: 100vh;
+    background-image: url("/Tesla-shop/image/space.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#tesla-font {
+    width: 25%;
+    margin: 3% none;
+}
+
+.main {
+    width: 50%;
+    height: 60%;
+    margin: 11% 25%;        
+    border: solid 0 black;
+    border-radius: 15%;
+    box-shadow: 0px 0px 150px rgb(0, 0, 0);
+    position: absolute;
+    z-index: 1;
+}
+
+h2 {
+    color: white;
+}
+
+.navigation {
+    position: relative;
+}
+
+.navigation li {
+    background-color: rgba(0, 0, 0, 0.678);
+    border-radius: 10px;
+    box-shadow: 8px -12px 30px;
+    line-height: 50px;
+    margin: 7% 20px;
+}
+
+.navigation li:hover {
+    background-color: #e82127;
+}
+
+#modelle {
+    height: 100%;
+    border-radius: 50px;
+    padding: 2% 2px;
+    text-align: center;
+    list-style-type: none;
+    word-break: break-word;
+    position: absolute;
+}
+
+#modelle a{
+    text-decoration: none;
+    color: rgb(190, 185, 185);
+    font-size: 25px;
+    padding: 2% 30%;
+    overflow: auto;
+    position: relative;
+}
+
+#modelle a:hover {
+    font-size: 28px;
+    color: white;
+}
+
+.kleidung-shop {
+    background-color: #f8f8f8;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.row-1 {
+    padding: 0 3%;
+    display: flex;
+    width: 100%;
+    height: 40%;
+}
+
+.box-1 {
+    width: 20%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clothing-1 {
+    width: 100%;
+    height: 100%;
+}
+
+.row-2 {
+    display: flex;
+    bottom: 0;
+    position: absolute;
+    margin: 4% 0;
+    padding: 0 3%;
+    width: 100%;
+    height: 40%;
+}
+
+
+.box-2 {
+    width: 20%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#clothing-2 {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    color: #000000d5;
+    text-align: center;
+    padding: 1% 0;
+}
+
+.bottom-bar {
+    width: 100%;
+    padding: 1% 1%;
+    position: absolute;
+    bottom: 0;
+}
+
+#arrow-left {
+    width: 35px;
+    display: flex;
+    float: left;
+    position: relative;
+}
+
+#arrow-up {
+    width: 35px;
+    display: flex;
+    margin: 0 49%;
+    position: relative;
+}
+
+.print-top {
+    display: none;
+}
+
+.print-clothing {
+    display: none;
+}
+
+.print-text-2 {
+    display: none;
+}
+
+#media-screen {
+    display: none;
+}
+
+@media print {
+
+    .print-top {
+        display: flex;
+        margin: 15% 0;
+        width: 100%;
+    }
+
+    .print-img {
+        width: 65%;
+        margin: -20px 370px;
+        float: right;
+        position: absolute;
+    }
+
+    .print-story {
+        font-size: 20px;
+        float: left;
+        position: relative;
+    }
+
+    .print-clothing {
+        margin: -5% 0;
+        display: block;
+    }
+
+    #print-logo {
+        width: 13%;
+        margin: 130px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .row-1 {
+        padding: 0 3%;
+        display: flex;
+        width: 100%;
+        height: 40%;
+    }
+    
+    .box-1 {
+        width: 20%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #clothing-1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    #print-start {
+        width: 60%;
+    }
+
+    .background-image {
+        display: none;
+    }
+
+    .kleidung-shop {
+        display: none;
+    }
+
+    .bottom-container {
+        display: none;
+    }
+
+    .quote {
+        display: none;
+    }
+
+    #profile {
+        display: none;
+    }
+
+    #settings {
+        display: none;
+    }
+
+    #logo {
+        float: left;
+    }
+
+    #print-text-1 {
+        margin: 5% 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    #print-text-2 {
+        margin: 5% 0;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    #media-screen {
+        display: grid;
+    }
+
+    #media-screen-font {
+        width: 25%;
+        padding: 2% 3%;
+    }
+
+    #tesla-font {
+        visibility: hidden;
+    }
+
+    .main {
+        width: 100%;
+        position: absolute;
+        margin: 15% auto;
+    }
+
+    .navigation li {
+        margin: 3% auto;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .navigation li {
+        margin: 4% auto;
+    }
+
+    #clothing-1 {
+        width: 100%;
+        height: 80%;
+    }
+
+    #clothing-2 {
+        width: 100%;
+        height: 80%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .navigation li {
+        margin: 10% auto;
+    }
+
+}
