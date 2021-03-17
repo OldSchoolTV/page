@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zinseszinsrechner by Latif Akan</title>
+
+<script>
+
+    function zinseszinsrechner() {
+
+    var startkapital =  parseFloat (document.getElementById("startkapital").value);
+    var zinssatz =      parseFloat (document.getElementById("zinssatz").value);
+    var laufzeit =      parseFloat (document.getElementById("laufzeit").value);
+
+    var endkapital;
+    var zinsen;
+    var start = 0;
+
+    var ausgabe = "";
+    var endwert = "";
+
+    ausgabe = ausgabe + "<table border = 1> <br>";
+    ausgabe = ausgabe + "<tr><th>Jahr</th><th>Kapital am 1.1.</th><th>Zinsen am 31.12.</th><th>Kapital am 31.12.</th></tr>";
+
+    while (start <= laufzeit) {
+
+        zinsen = startkapital * zinssatz / 100;
+        endkapital = startkapital + zinsen;
+
+        ausgabe = ausgabe + "<tr><td>" + start + "</td><td>" + startkapital.toFixed(2) + "€" + "</td><td>" + zinsen.toFixed(2) + "€" + "</td><td>" + endkapital.toFixed(2) + "€" + "</td></tr>";
+
+        startkapital = endkapital;
+        start++;
+    }
+
+    endwert = startkapital - zinsen;
+
+    ausgabe = ausgabe + "</table> <br>";
+
+    document.getElementById("ausgabe").innerHTML = ausgabe;
+    document.getElementById("endwert").innerHTML = "Das Endkapital beträgt bei einer Laufzeit von " + laufzeit + " Jahren und einem Zinssatz von " + zinssatz + "% = " + endwert.toFixed(2) + "€.";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+    <h1>Zinseszinsrechner by Latif Akan</h1>
+    
+    Startkapital in €:   <input id="startkapital" size="6" type="text" value="1000">  <br>
+    Zinssatz in %:       <input id="zinssatz" size="6" type="text" value="2">         <br>
+    Laufzeit in Jahren:  <input id="laufzeit" size="6" type="text" value="5">         <br> <br>
+
+    <button onclick="zinseszinsrechner()">Berechnen</button>                <br>
+
+    <div id="ausgabe"></div>
+
+    <div id="endwert"></div>
+
+</body>
+
+</html>
