@@ -1,7 +1,7 @@
 <html>
     
      <head>
-     <title>Zinseszinsrechner</title>
+     <title>Rentenendwertrechner</title>
      <meta http-equiv="Conten-Type" content="text/html; charset=utf-8">
 
      <script>
@@ -16,9 +16,9 @@
           
           function fRechner() {
 
-               var vZinssatz =     parseFloat(document.getElementById("idZinssatz").value);
-               var vRente = parseFloat(document.getElementById("idRente").value);
-               var vLaufzeit =     parseFloat(document.getElementById("idLaufzeit").value);
+               var vZinssatz =      parseFloat(document.getElementById("idZinssatz").value);
+               var vRente =         parseFloat(document.getElementById("idRente").value);
+               var vLaufzeit =      parseFloat(document.getElementById("idLaufzeit").value);
                
                var vZinsfaktor = 1 + vZinssatz / 100;
                var vRentenendwert = vRente * (Math.pow(vZinsfaktor, vLaufzeit) -1) / (vZinsfaktor -1);
@@ -67,9 +67,9 @@
 
         <h1>Zinseszinsrechner</h1>
 
-        Zinssatz:       <input id="idZinssatz" type="text" value="2">%<br>
-        Nachschüssige Rente:   <input id="idRente" type="text" value="100">€<br>
-        Laufzeit:       <input id="idLaufzeit" type="text" value="5"> Jahre<br><br>
+        Zinssatz:               <input id="idZinssatz" type="text" value="2">%<br>
+        Nachschüssige Rente:    <input id="idRente" type="text" value="100">€<br>
+        Laufzeit:               <input id="idLaufzeit" type="text" value="5"> Jahre<br><br>
 
         <button onClick="fRechner()">Berechnen</button><br><br>
 
